@@ -24,5 +24,5 @@ for element in linkTable:
     description = preetyWeb.find(class_="content")
     slownik = ({"link":url,"title":title.text,"company":company.text,"location":location.text[10:],"posted":posted.text[8:],"description":description.text })
     results.append(slownik)
-with open("wyniki.txt",'w') as jsonfile:
+with open("results.json",'w') as jsonfile:
     json.dump(results,jsonfile)
